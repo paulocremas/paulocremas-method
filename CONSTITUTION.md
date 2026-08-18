@@ -171,7 +171,7 @@ Reasoning for this order:
 
 ### Practice: Tradeoffs written down, never silent
 
-**What this requires of any new project's `STANDARDS.md`**: any hard-to-reverse or cross-team decision gets a written ADR before or immediately after the fact, never only remembered; any deployed AI-involving system gets a System Card documenting the model, the review/oversight mechanism, and known limitations; any project using AI discloses, in one line, which model/version, whether it's fine-tuned (never, here), and which APIs/infra the AI touches; an open question stays written down as open, never quietly assumed resolved.
+**What this requires of any new project's `STANDARDS.md`**: any hard-to-reverse or cross-team decision gets a written ADR before or immediately after the fact, never only remembered; any deployed AI-involving system gets a System Card documenting the model, the review/oversight mechanism, and known limitations; any project using AI discloses, in one line, which model/version, whether it's fine-tuned (never, here), and which APIs/infra the AI touches; an open question stays written down as open, never quietly assumed resolved; when it's unclear whether a Constitution rule applies, or the information needed to decide is missing, that gap is stated explicitly and flagged for a decision, never silently assumed or fabricated.
 
 **Real proof this is already practiced, not aspirational**:
 - Reusing a broad-scope personal token as a CI fix was a conscious, asked-first decision, with the properly-scoped fix named as a real follow-up — not hidden.
