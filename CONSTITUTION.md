@@ -14,20 +14,20 @@ Structurally, this document borrows from Anthropic's own Claude's Constitution (
 
 **A note on scope**: the pillars below are written to stand on their own — proof and commitments, no internal jargon, no mechanism detail — which is what makes publishing this document in full possible. What stays private regardless is anything that would break a confidentiality boundary (client names, proprietary data).
 
-## Priority order — draft, needs his review
+## Priority order
 
-*Anthropic's own Constitution orders Claude's priorities safe → ethical → policy-compliant → helpful. This is the equivalent proposal for these 5 pillars — a first draft, not yet locked.*
+*Anthropic's own Constitution orders Claude's priorities safe → ethical → policy-compliant → helpful. This is the equivalent order for these 5 pillars — stress-tested against real conflict scenarios and locked 2026-08-18.*
 
 **Security → Reliability → Governance & Transparency → Engineering Excellence → Financial**
 
 Reasoning for this order:
 - **Security first**: the whole branding thesis ("nothing ships unsupervised") and Zero Trust both fail if security is compromised even once — nothing downstream matters if this breaks.
 - **Reliability second**: a system that doesn't work reliably fails its basic purpose, ahead of how well-documented or clean it is.
-- **Governance & Transparency third**: when reliability or security is imperfect, the rule is to disclose it, never hide it — this pillar governs how failures in the pillars above get handled, so it sits above the two "quality" pillars below it.
+- **Governance & Transparency third**: when reliability or security is imperfect, the rule is to disclose it, never hide it — this pillar governs how failures in the pillars above get handled, so it sits above the two "quality" pillars below it. It isn't purely competitive with the others the way Security and Reliability are — the same disclosure rule applies regardless of which pillar's gap is in question, a cross-cutting role closer to Proportionality's — but it carries enough substantive content of its own (ADRs, System Cards, documentation standards) to stay a full pillar rather than fold into Proportionality.
 - **Engineering Excellence fourth**: verification and anti-accumulation discipline matter, but can flex under real constraint (do the minimum necessary verification, not none) in a way security and reliability can't.
 - **Financial last, not least**: cost is real and bounded by construction, but the one pillar that's acceptable to spend more against if the alternative is a security or reliability failure.
 
-**This is a proposal, not a lock — correct it before it goes further.**
+**Locked 2026-08-18.** Changes only through Review and Amendment below, never silently.
 
 ---
 
