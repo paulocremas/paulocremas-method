@@ -207,11 +207,16 @@ Reasoning for this order:
 
 **Floor**: Proportionality scales the depth and frequency of a pillar's controls, never whether Security's non-negotiable baseline applies. Every project, regardless of tier, requires: no runtime service account mixed with a deploy identity, no untested IAM change made permanent, no public-vs-private exposure decision left undocumented. Everything else in every pillar scales by tier.
 
+**Tiers**: every project is classified into one of three tiers by consequence-of-failure and reversibility, which sets both how much of each pillar's controls apply and which supervision mode governs the work.
+- **Tier 1 — Low**: reversible, no external exposure, failure affects only Paulo's own workflow (e.g. a manual, no-infra AI enrichment run). Full pillar controls optional beyond the Floor above. Supervision: human-on-the-loop.
+- **Tier 2 — Standard**: touches live infrastructure or third-party data, failure is recoverable but costly (e.g. a production pipeline running under its own service account). Full pillar controls apply. Supervision: human-on-the-loop, human-in-the-loop for anything hard-to-reverse.
+- **Tier 3 — Critical**: touches customer or personal data, has public exposure, or is hard to reverse (e.g. an IAM change, a public dashboard, anything carrying PII). Full pillar controls apply, no exceptions without a written, Paulo-approved exception (Review and Amendment). Supervision: human-in-the-loop.
+
 **Precedent**:
-- Two AI enrichment workloads are manual-only, no cloud infrastructure at all — a practice like escalating autoscale alerts simply doesn't map onto something with no scaling lever to escalate to.
+- Two AI enrichment workloads are manual-only, no cloud infrastructure at all — Tier 1, a practice like escalating autoscale alerts simply doesn't map onto something with no scaling lever to escalate to.
 
 **Commitment, adopted 2026-08-17, status "in rollout"**:
-- A **risk/criticality tiering method**: classify each project by consequence-of-failure and reversibility, then apply only the tier-appropriate subset of the 5 pillars' controls. Turns proportionality from a per-case judgment call into a repeatable rule — and is the concrete mechanism behind the HITL/HOTL supervision tiering this Constitution's enforcement already uses in practice.
+- The **Tiers** defined above turn proportionality from a per-case judgment call into a repeatable rule, and are the concrete mechanism behind the HITL/HOTL supervision tiering this Constitution's enforcement already uses in practice.
 
 **Real market practices this maps to**: proportionality as a named principle in security engineering (control depth should match risk exposure and system size, not be applied identically everywhere); the **FAIR Institute**'s risk-based technology controls framework.
 
