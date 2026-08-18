@@ -6,7 +6,7 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 
 - [Claude's Constitution (Jan 2026)](https://www.anthropic.com/news/claude-new-constitution) — structural precedent cited in the Preamble
 - [Prompt caching documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) — Pillar 2 (Financial)
-- [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy) — model for Revisão e Emenda
+- [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy) — model for Review and Amendment
 
 ## Philosophies (Preamble)
 
@@ -58,7 +58,7 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 - [Home Office UK — Proportionate security](https://engineering.homeoffice.gov.uk/principles/proportionate-security/)
 - [FAIR Institute — Risk-Based Technology Controls Framework](https://www.fairinstitute.org/blog/establishing-a-risk-based-technology-controls-framework)
 
-## Revisão e Emenda
+## Review and Amendment
 
 - [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy) — see Anthropic, above
 - [Google Cloud Well-Architected Framework](https://docs.cloud.google.com/architecture/framework)

@@ -215,7 +215,7 @@ Reasoning for this order:
 
 ---
 
-## Revisão e Emenda — who enforces this, and how it changes
+## Review and Amendment — who enforces this, and how it changes
 
 **Why this exists**: a constitution that can't be checked against reality, or amended when it's wrong, is either quietly ignored or followed past the point it still makes sense. This section names who is accountable, how compliance actually gets checked instead of assumed, and how the document itself is allowed to change.
 
