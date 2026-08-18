@@ -205,6 +205,8 @@ Reasoning for this order:
 
 **What this requires of any new project's `STANDARDS.md`**: every project gets classified by consequence-of-failure and reversibility before deciding which subset of the 5 pillars' controls actually apply to it. A project with no cloud infrastructure and no scaling lever doesn't need an escalating-autoscale-alert practice, for instance — pretending it does wastes effort without reducing any real risk.
 
+**Floor**: Proportionality scales the depth and frequency of a pillar's controls, never whether Security's non-negotiable baseline applies. Every project, regardless of tier, requires: no runtime service account mixed with a deploy identity, no untested IAM change made permanent, no public-vs-private exposure decision left undocumented. Everything else in every pillar scales by tier.
+
 **Precedent**:
 - Two AI enrichment workloads are manual-only, no cloud infrastructure at all — a practice like escalating autoscale alerts simply doesn't map onto something with no scaling lever to escalate to.
 
