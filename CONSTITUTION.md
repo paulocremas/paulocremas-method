@@ -1,6 +1,6 @@
 # The Constitution
 
-*Governs Paulo Cremasco's own work. Published here in full since 2026-08-18; the public marketing layer (portfolio, resume, LinkedIn) carries only distilled, proof-anchored pieces of it, through a separate process. The mechanism that enforces this document (the agent hierarchy) is a technical/implementation layer, so it sits beside this document in `lead-agent.md` rather than inside it, per the philosophy/principles/mechanism separation this document is built on.*
+*Governs how Paulo Cremasco's own work gets built and run: security, cost, reliability, engineering standards, and how tradeoffs get disclosed. Published here in full since 2026-08-18. The mechanism that enforces this document (the agent hierarchy) is a technical/implementation layer, so it sits beside this document in `lead-agent.md` rather than inside it, per the philosophy/principles/mechanism separation this document is built on.*
 
 ## Preamble
 
