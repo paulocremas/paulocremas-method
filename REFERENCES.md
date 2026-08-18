@@ -8,8 +8,8 @@ Every source the Constitution's pillars cite by name, grouped by theme. A few ar
 - [How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)
 - [Prompt caching documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
 - [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy)
-- Claude's Constitution (Jan 2026) — named source, no link on file
-- Constitutional AI (original training method) — named source, no link on file
+- [Claude's Constitution (Jan 2026)](https://www.anthropic.com/news/claude-new-constitution)
+- [Constitutional AI: Harmlessness from AI Feedback (Bai et al., 2022, original training method)](https://arxiv.org/abs/2212.08073)
 
 ## Multi-agent architecture (external)
 
@@ -25,7 +25,7 @@ Every source the Constitution's pillars cite by name, grouped by theme. A few ar
 
 - [arXiv — Dynamic Safe Interruptibility](https://arxiv.org/pdf/1704.02882)
 - [Inferensys — What is Corrigibility?](https://inferensys.com/glossary/enterprise-artificial-intelligence-governance/vendor-ai-risk-management/corrigibility)
-- EU AI Act (runtime-halt and disclosure requirements) — named source, no link on file
+- [EU AI Act — Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) (runtime-halt and disclosure requirements)
 
 ## Legal / data protection
 
@@ -35,7 +35,7 @@ Every source the Constitution's pillars cite by name, grouped by theme. A few ar
 ## Security & access
 
 - [NinjaOne — Backup and Disaster Recovery (BDR) Explained](https://www.ninjaone.com/blog/what-is-backup-and-disaster-recovery-and-why-do-you-need-it/)
-- NIST SP 800-34 (contingency planning, 12h/30d recovery targets) — named source, no link on file
+- [NIST SP 800-34 Rev. 1 — Contingency Planning Guide](https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf) (12h/30d recovery targets)
 - [Clio — Succession Planning for Solo Law Firms ("key person risk")](https://www.clio.com/blog/solo-law-firm-succession-planning/)
 - [Exabeam — Zero Trust in 2026](https://www.exabeam.com/explainers/zero-trust/zero-trust-in-2026-principles-technologies-and-best-practices/)
 - [Palo Alto Networks — Defense-in-Depth](https://www.paloaltonetworks.com/cyberpedia/what-is-defense-in-depth)
@@ -67,5 +67,6 @@ Every source the Constitution's pillars cite by name, grouped by theme. A few ar
 ## Market / positioning data
 
 - [Veracode — 2026 GenAI Code Security Report](https://www.veracode.com/blog/2026-genai-code-security-report-ai-risk/)
-- Checkmarx developer trust/permission-scope survey — named source, no link on file
-- Stanford Digital Economy Lab + ADP payroll data (junior/senior job-posting split) — named source, no link on file
+- [The Register — Checkmarx: devs know AI code is riddled with holes, but ship it anyway](https://www.theregister.com/devops/2026/06/09/devs-know-ai-code-is-riddled-with-holes-but-ship-it-anyway/5252824) (70% believe AI code carries more vulnerabilities, 30% ship it anyway)
+- Checkmarx permission-scope survey (60% don't adjust AI-generated code's permissions before shipping) — named source, no link on file
+- [Stanford Digital Economy Lab — Canaries Dashboard](https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/) (Stanford + ADP payroll data) — confirms developers aged 22-25 down ~20% in AI-exposed roles since their 2022 peak; the "entry-level postings down 60-67%" figure elsewhere in this project's notes was **not** found in this source on re-check and needs a real citation or a correction before it's repeated again
