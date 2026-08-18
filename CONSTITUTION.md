@@ -55,6 +55,19 @@ Reasoning for this order:
 
 **Real market practices this maps to**: **Zero Trust** ("never trust, always verify"); Google Cloud's own documented method for testing permission changes via service-account impersonation; AWS Well-Architected's **SEC03-BP04** ("reduce permissions continuously"); Brazil's **LGPD** (Lei Geral de Proteção de Dados).
 
+### Practice: Confidentiality by construction
+
+**What this requires of any new project's `STANDARDS.md`**: any project touching another party's confidential material lives in its own directory/repo, physically separate from any public-facing material — never a `.gitignore` boundary alone; any public rebuild of a real, confidential system is a sanitized generalization built from scratch, never a redacted copy of the real code or data.
+
+**Precedent**:
+- Every company/client gets its own repo, in the same parent directory as any public material, with no client folder living beside it.
+- A public showcase mirrors a real production architecture in fully generic form — no real client data, no redacted-but-recognizable code.
+
+**Commitment, adopted 2026-08-18, status "in rollout"**:
+- A directory-separation check before any new public repo is created: confirm no confidential material sits in the same tree.
+
+**Real market practices this maps to**: data minimization / need-to-know as a security-engineering principle; clean-room reimplementation (building from a spec or generic pattern rather than derived from confidential source).
+
 ---
 
 ## Pillar 2: Financial
