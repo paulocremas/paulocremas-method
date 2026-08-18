@@ -72,12 +72,13 @@ Reasoning for this order:
 
 ## Pillar 2: Financial
 
-**Why this pillar exists**: AI-driven work has a failure mode traditional software mostly doesn't — an agentic loop or an unbounded batch job can spend money indefinitely if nothing bounds it by design. Cost needs to be bounded **by construction**, the architecture itself makes the failure impossible or capped, not just caught after the fact on a monthly bill. This is also the most flexible pillar in the priority order above: worth spending more against, deliberately, if the alternative is a security or reliability failure — but that flexibility only holds because the baseline discipline below already exists and isn't itself the thing failing.
+**Why this pillar exists**: cost overrun is an old failure mode, not a new one — but AI-driven work gives it a new, faster shape: an agentic loop or an unbounded batch job can spend money indefinitely if nothing bounds it by design, faster than a traditional misconfiguration usually would. Cost needs to be bounded **by construction**, the architecture itself makes the failure impossible or capped, not just caught after the fact on a monthly bill. This is also the most flexible pillar in the priority order above: worth spending more against, deliberately, if the alternative is a security or reliability failure — but that flexibility only holds because the baseline discipline below already exists and isn't itself the thing failing.
 
 **What this requires of any new project's `STANDARDS.md`**: any AI work runs through a bounded-cost interface (a batch API, not an open-ended interactive loop) unless a specific, reviewed exception is documented; escalating budget alerts configured before a new agent or pipeline ships, not after; a real cost projection done before a new agent ships, not discovered from the first bill; prompt/response caching used by default wherever the underlying API supports it.
 
 **Precedent**:
 - An AI enrichment workload runs via a batch inference API — inherently bounded-cost, never an open-ended interactive agent loop.
+- A live ops dashboard's billing panel makes real spend visible on demand, not discovered from a monthly bill after the fact.
 
 **Commitments, adopted 2026-08-18, status "in rollout"**:
 - Escalating budget alerts (same structure as Pillar 1: 50/75/90% of budget plus a hard cap), leaning toward enforcement — stopping the next call, not just notifying after the spend already happened.
