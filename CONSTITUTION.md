@@ -145,7 +145,7 @@ Reasoning for this order:
 
 ### Practice: Verify before shipping, revert without drama when it doesn't generalize
 
-**What this requires of any new project's `STANDARDS.md`**: a real, measured verification step before any optimization or port replaces an existing method — never assumed equivalent; a tested rollback path before anything ships that could need one; extra scrutiny for any AI-suggested library, pattern, or API that isn't already proven in this environment, treated as needing verification, not baseline trust; a caveat documented and kept, not hidden, when a technique that worked once doesn't generalize elsewhere.
+**What this requires of any new project's `STANDARDS.md`**: a real, measured verification step before any optimization or port replaces an existing method — never assumed equivalent; a tested rollback path before anything ships that could need one; extra scrutiny for any AI-suggested library, pattern, or API that isn't already proven in this environment, treated as needing verification, not baseline trust; a caveat documented and kept, not hidden, when a technique that worked once doesn't generalize elsewhere; any project with non-trivial logic (a branch, a loop, a parser, a money or security path) ships with a minimal test suite covering it — not full coverage, just enough that Pillar 3's CI test-gate has something real to enforce.
 
 **Precedent**:
 - A concurrent-fetch optimization was verified byte-identical against the old method before switching.
@@ -154,6 +154,7 @@ Reasoning for this order:
 **Commitments, adopted 2026-08-18, status "in rollout"**:
 - A tested, verified rollback path as a standing rule: a ported optimization needs an equivalent verification step before it replaces the old method.
 - Extra verification for AI-suggested unfamiliar tools before they're treated as trustworthy.
+- A minimal test suite required for any non-trivial logic before a project counts as "ready to ship" — closes the gap where Pillar 3's CI test-gate had nothing guaranteed to enforce.
 
 **Real market practices this maps to**: **Choose Boring Technology** (Dan McKinley); **Shift Left**.
 
