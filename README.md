@@ -1,6 +1,6 @@
 # How I work
 
-This repo is the real, working version of two things:
+This repo is the real, working version of three things:
 
 - **`CONSTITUTION.md`** — the principles I hold myself to on every project: security, cost, reliability, engineering standards, and how tradeoffs get disclosed instead of hidden. Derived bottom-up from real practice, not copied from a framework. This is the canonical copy — my own machine symlinks to this exact file rather than keeping a second private one, so what you're reading is what's actually in effect.
 - **`lead-agent.md`** — the actual Claude Code subagent configuration I consult for architecture decisions and standards review. Not a mockup: this file is symlinked into my live setup and is the real thing running when I use it.

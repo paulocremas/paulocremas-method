@@ -1,6 +1,6 @@
 # The Constitution
 
-*Internal document. Governs Paulo Cremasco's own work — never published as-is. Distilled, proof-anchored pieces of it reach the public layer (portfolio, resume, LinkedIn) through a separate process; the mechanism that enforces this document (the agent hierarchy) is a technical/implementation layer and deliberately does not appear here, per the philosophy/principles/mechanism separation this document is built on.*
+*Governs Paulo Cremasco's own work. Published here in full since 2026-08-18; the public marketing layer (portfolio, resume, LinkedIn) carries only distilled, proof-anchored pieces of it, through a separate process. The mechanism that enforces this document (the agent hierarchy) is a technical/implementation layer, so it sits beside this document in `lead-agent.md` rather than inside it, per the philosophy/principles/mechanism separation this document is built on.*
 
 ## Preamble
 
@@ -12,7 +12,7 @@ Structurally, this document borrows from Anthropic's own Claude's Constitution (
 
 **Four philosophies sit behind these principles**, each a real, established school of thought rather than something invented for this document: **agentic engineering** (a human directs and reviews AI agent output — governance, architecture, and security stay owned by the person, never the agent); **Choose Boring Technology** (Dan McKinley — spend novelty budget only where it truly matters, especially now that AI can suggest unfamiliar tools with no way to verify they're sound); **human-in-the-loop / human-on-the-loop** (approval before high-risk action, monitoring for everything else — the precise, tiered version of "nothing ships unsupervised"); and **You Build It, You Run It** (Werner Vogels, Amazon, 2006 — whoever builds a system also operates it, no handoff to someone else). This is a canonical summary, not the full reasoning behind each — that reasoning evolves in Paulo's own working notes and reaches this document only when it's settled enough to state as a standing principle, through the amendment process this Constitution defines for itself.
 
-**A note on scope**: the pillars below are written to stand on their own — proof and commitments, no internal jargon, no mechanism detail — because the technical substance of this Constitution is meant to become more open over time, not stay sealed. What stays private regardless is anything that would break a confidentiality boundary (client names, proprietary data). The agent hierarchy that enforces this document was private by default until **2026-08-18**, when Paulo decided it can be shown publicly too, as part of a repo documenting his working method alongside this Constitution.
+**A note on scope**: the pillars below are written to stand on their own — proof and commitments, no internal jargon, no mechanism detail — which is what makes publishing this document in full possible. What stays private regardless is anything that would break a confidentiality boundary (client names, proprietary data). The agent hierarchy that enforces this document was private by default until **2026-08-18**, when Paulo decided it can be shown publicly too, as part of this repo.
 
 ## Priority order — draft, needs his review
 
