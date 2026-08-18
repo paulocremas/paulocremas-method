@@ -30,17 +30,18 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 - [arXiv — Dynamic Safe Interruptibility](https://arxiv.org/pdf/1704.02882) (Orseau & Armstrong, DeepMind/Oxford, 2016)
 - [Inferensys — What is Corrigibility?](https://inferensys.com/glossary/enterprise-artificial-intelligence-governance/vendor-ai-risk-management/corrigibility)
 - [EU AI Act — Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) (runtime-halt and disclosure requirements)
-- California SB-1047 — named source, no link on file
-- 2024 Seoul AI Safety Summit — named source, no link on file
+- [California SB-1047 — official bill text](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB1047) (vetoed 2024, cited for its runtime-halt provisions regardless of enactment)
+- [Seoul Declaration, AI Seoul Summit 2024 — official text](https://www.industry.gov.au/publications/seoul-declaration-countries-attending-ai-seoul-summit-21-22-may-2024)
 - [Sonatype — Software Composition Analysis (SCA)](https://www.sonatype.com/resources/articles/what-is-software-composition-analysis)
 - [Fortinet — Shift Left Security](https://www.fortinet.com/resources/cyberglossary/shift-left-security)
 
 ## Pillar 4: Engineering Excellence
 
 - [Google SRE Book — Eliminating Toil](https://sre.google/sre-book/eliminating-toil/)
-- NIST SP 800-57 (key management, secret rotation cadence) — named source, no link on file
-- CIS Controls v8 — named source, no link on file
-- GCP BigQuery IAM and partitioning guidance (Google Cloud docs) — named source, no link on file
+- [NIST SP 800-57 Part 1 Rev. 5 — Recommendation for Key Management](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final)
+- [CIS Critical Security Controls v8](https://www.cisecurity.org/controls)
+- [Google Cloud — Introduction to security and access controls in BigQuery](https://docs.cloud.google.com/bigquery/docs/access-control-intro)
+- [Google Cloud — Manage partition and cluster recommendations in BigQuery](https://docs.cloud.google.com/bigquery/docs/manage-partition-cluster-recommendations)
 - [NIST SP 800-34 Rev. 1 — Contingency Planning Guide](https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf) (12h/30d recovery targets)
 - [NinjaOne — Backup and Disaster Recovery (BDR) Explained](https://www.ninjaone.com/blog/what-is-backup-and-disaster-recovery-and-why-do-you-need-it/) (3-2-1-1-0 backup practice)
 
@@ -60,4 +61,4 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 ## Revisão e Emenda
 
 - [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy) — see Anthropic, above
-- GCP Well-Architected Framework Review — named source, no link on file
+- [Google Cloud Well-Architected Framework](https://docs.cloud.google.com/architecture/framework)
