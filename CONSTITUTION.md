@@ -257,6 +257,8 @@ Reasoning for this order:
 - **Exceptions**: any exception to a Constitution rule, when a real tradeoff demands one, is approved by Paulo explicitly and written down — never silently taken (Pillar 5).
 - **Amendment**: this Constitution changes only on a real, concrete event — a new practice proven, a gap found, a decision that no longer holds — never on a calendar schedule. The lesson behind this is real: two internal "org overview" documents were built and deleted for costing upkeep without paying for themselves; a document that updates on a schedule accumulates exactly that kind of debt.
 - **Self-assessment**: a short, honest check that the Constitution is actually being followed, not assumed to be — run on the same event-triggered cadence as amendment (a new project, an incident, or a stretch of time where nothing got checked), never calendar-based. Modeled on GCP's own Well-Architected Framework Review: one short question per pillar, scaled down to one person instead of an enterprise team.
+
+  **Graduation**: a commitment moves from "in rollout" to standing Precedent the first time it's demonstrated on a real, running project — not on a calendar, not on intention. Every self-assessment counts how many of each pillar's commitments have graduated, so "in rollout" can't quietly become the permanent state.
   - **Security** — can I point to a real, current proof of least-privilege/impersonation-testing on the last project touched?
   - **Financial** — is there an actual configured budget alert, not just a stated intention?
   - **Reliability** — does the last incident have a written root cause plus two independent fixes, not one?
