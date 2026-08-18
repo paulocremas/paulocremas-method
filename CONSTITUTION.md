@@ -90,7 +90,7 @@ Reasoning for this order:
 
 ## Pillar 3: Reliability
 
-**Why this pillar exists**: a system that doesn't work reliably fails its basic purpose, ahead of how well-documented or well-verified it is elsewhere — this is why it sits second in the priority order, right after Security. It has two practices: designing so any real failure is cheap when it happens, and never trusting an inferred state over checking the real one — together they mean incidents get contained and caught quickly, not silent or catastrophic.
+**Why this pillar exists**: a system that doesn't work reliably fails its basic purpose, ahead of how well-documented or well-verified it is elsewhere — this is why it sits second in the priority order, right after Security. It has three practices: designing so any real failure is cheap when it happens, detecting that a failure happened at all without waiting for a human to notice, and never trusting an inferred state over checking the real one — together they mean incidents are caught quickly, contained cheaply, and verified against reality, not silent or catastrophic.
 
 ### Practice: Design for cheap failure
 
@@ -123,6 +123,18 @@ Reasoning for this order:
 - Confirming CI actually gates deploys on passing tests, not just that tests exist.
 
 **Real market practices this maps to**: **Software Composition Analysis (SCA)**, the same practice behind a Software Bill of Materials (SBOM) — the traditional-software parallel to the Light AI-BOM adopted under Pillar 5; **Shift Left** (catch problems as early in the lifecycle as possible).
+
+### Practice: Detect failure, don't wait to notice it
+
+**What this requires of any new project's `STANDARDS.md`**: every scheduled or recurring job has an automated check that alerts when it doesn't run, or runs and produces no output, on its own — detection never depends on a human opening a dashboard.
+
+**Precedent**:
+- A real incident ran a full day, zero items captured, before anyone noticed — the root cause was fixable in minutes once found; the day was lost entirely to not knowing.
+
+**Commitment, adopted 2026-08-18, status "in rollout"**:
+- Automated silent-failure detection: a missed or zero-output scheduled run triggers an alert on its own.
+
+**Real market practices this maps to**: **MTTD (Mean Time to Detect)** as a reliability metric distinct from MTTR; the dead man's switch / heartbeat monitoring pattern.
 
 ---
 
