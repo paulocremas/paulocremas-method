@@ -155,6 +155,7 @@ Reasoning for this order:
 - A tested, verified rollback path as a standing rule: a ported optimization needs an equivalent verification step before it replaces the old method.
 - Extra verification for AI-suggested unfamiliar tools before they're treated as trustworthy.
 - A minimal test suite required for any non-trivial logic before a project counts as "ready to ship" — closes the gap where Pillar 3's CI test-gate had nothing guaranteed to enforce.
+- **Model Context Protocol (MCP)** as the default method for any future integration with a client's external tool or data source, instead of a bespoke integration — adopted forward, no real usage yet, same logic as the data-lineage commitment under "Database / data-layer standards" below.
 
 **Real market practices this maps to**: **Choose Boring Technology** (Dan McKinley); **Shift Left**.
 
