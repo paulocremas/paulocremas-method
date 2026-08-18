@@ -108,7 +108,7 @@ Reasoning for this order:
 - Chaos engineering — blast-radius-scoped proactive failure injection, starting small, expanding only after safety controls are confirmed.
 - A kill switch — any agent halted immediately, no new deployment needed.
 
-**Real market practices this maps to**: **Defense in Depth**; **Chaos Engineering**; kill switch → **Safe Interruptibility** (Orseau & Armstrong, DeepMind/Oxford, 2016) + **Corrigibility** — now also a regulatory requirement (EU AI Act, California SB-1047, 2024 Seoul AI Safety Summit); third-party/vendor dependency risk management (an undisclosed vendor-side shared-limit incident is the direct proof of this).
+**Real market practices this maps to**: **Defense in Depth**; **Chaos Engineering**; kill switch → **Safe Interruptibility** (Orseau & Armstrong, DeepMind/Oxford, 2016) + **Corrigibility** — now also a regulatory requirement (EU AI Act, California SB-1047, 2024 Seoul AI Safety Summit).
 
 ### Practice: Verify against ground truth, don't infer
 
@@ -165,6 +165,7 @@ Reasoning for this order:
 - Repo status fits one line by design across every repo in production.
 - Two org-level "overview" docs were built and then deleted once they proved to just duplicate content and cost upkeep without paying for itself.
 - A one-off CI setup bug was turned into a checklist so it can't recur on the next repo.
+- An orphaned service-account key, found via audit log, was removed once its absence was confirmed safe — nothing left as silent debt.
 
 **Commitments, adopted 2026-08-18, status "in rollout"**:
 - A defined secret-rotation cadence — privileged/service credentials (production or infra access) rotate at least every 90 days, 30 days for broad-access credentials.
@@ -215,6 +216,7 @@ Reasoning for this order:
 **What this requires of any new project's `STANDARDS.md`**: documentation complete enough that someone — or an AI — with zero prior context can understand the whole project by reading only the docs, no hidden context required; postmortems consolidated in one discoverable location, never scattered; a periodic zero-context test that actually verifies this empirically instead of assuming it.
 
 **Precedent**:
+- A real `STANDARDS.md` already functions as the single source of truth for how a company's pipelines get built — new work derives from it, not from asking around.
 - A governance clarification: "AI driven" does not mean removing human code review — it means the docs must stand on their own, with no hidden context needed to understand the business.
 
 **Commitments, adopted 2026-08-17, status "in rollout"**:
@@ -256,7 +258,7 @@ Reasoning for this order:
 
 **What this requires**:
 - **Exceptions**: any exception to a Constitution rule, when a real tradeoff demands one, is approved by Paulo explicitly and written down — never silently taken (Pillar 5).
-- **Amendment**: this Constitution changes only on a real, concrete event — a new practice proven, a gap found, a decision that no longer holds — never on a calendar schedule. The lesson behind this is real: two internal "org overview" documents were built and deleted for costing upkeep without paying for themselves; a document that updates on a schedule accumulates exactly that kind of debt.
+- **Amendment**: this Constitution changes only on a real, concrete event — a new practice proven, a gap found, a decision that no longer holds — never on a calendar schedule. The lesson behind this is real: two internal "org overview" documents were built and deleted for costing upkeep without paying for themselves; a document that updates on a schedule accumulates exactly that kind of debt. This governs how the *document itself* changes, not the handful of operational checks it requires (credential rotation, IAM Recommender scans, the periodic zero-context test) that run on a minimum calendar floor — those exist because the thing they check doesn't announce its own drift, and a fixed floor is the only way to guarantee it gets looked at. A rule that proves genuinely global at the project level is promoted into this Constitution the same way — event-triggered by real proof at a smaller scale, not scheduled.
 - **Self-assessment**: a short, honest check that the Constitution is actually being followed, not assumed to be — run on the same event-triggered cadence as amendment (a new project, an incident, or a stretch of time where nothing got checked), never calendar-based. Modeled on GCP's own Well-Architected Framework Review: one short question per pillar, scaled down to one person instead of an enterprise team.
 
   **Graduation**: a commitment moves from "in rollout" to standing Precedent the first time it's demonstrated on a real, running project — not on a calendar, not on intention. Every self-assessment counts how many of each pillar's commitments have graduated, so "in rollout" can't quietly become the permanent state.
