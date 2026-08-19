@@ -39,6 +39,16 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 - [Fortinet — Shift Left Security](https://www.fortinet.com/resources/cyberglossary/shift-left-security)
 - [Atlan — data quality testing techniques, 2026](https://atlan.com/data-quality-testing/) — source for the freshness/volume/schema/distribution assertion shape; a single vendor source, not a standards body, worth a stronger citation if this gets cited anywhere public-facing
 
+## Pillar 3: Governance & Transparency
+
+- [adr.github.io — Architectural Decision Records](https://adr.github.io/)
+- [AWS Architecture Blog — ADR best practices](https://aws.amazon.com/blogs/architecture/master-architecture-decision-records-adrs-best-practices-for-effective-decision-making/)
+- [AI Buzz — AI System Cards Explained](https://aibuzz.blog/ai-system-cards-explained/)
+- [CycloneDX — ML-BOM](https://cyclonedx.org/capabilities/mlbom/) — corrected 2026-08-18, replaces a vendor blog with the actual standard (now also ECMA-424)
+- [EU AI Act — Article 50 transparency rules](https://artificialintelligenceact.eu/transparency-rules-article-50/) — consumer-facing AI-content disclosure, live since 2026-08-02; added 2026-08-19
+- [Clio — Succession Planning for Solo Law Firms ("key person risk")](https://www.clio.com/blog/solo-law-firm-succession-planning/)
+- [Rootly — How to Run Effective Blameless Postmortems](https://rootly.com/incident-postmortems/blameless) — added 2026-08-19
+
 ## Pillar 4: Engineering Excellence
 
 - [Google SRE Book — Eliminating Toil](https://sre.google/sre-book/eliminating-toil/)
@@ -54,15 +64,10 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 - [NIST SP 800-34 Rev. 1 — Contingency Planning Guide](https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf) (12h/30d recovery targets)
 - [NinjaOne — Backup and Disaster Recovery (BDR) Explained](https://www.ninjaone.com/blog/what-is-backup-and-disaster-recovery-and-why-do-you-need-it/) (3-2-1-1-0 backup practice)
 
-## Pillar 3: Governance & Transparency
+## Pillar 5: Financial
 
-- [adr.github.io — Architectural Decision Records](https://adr.github.io/)
-- [AWS Architecture Blog — ADR best practices](https://aws.amazon.com/blogs/architecture/master-architecture-decision-records-adrs-best-practices-for-effective-decision-making/)
-- [AI Buzz — AI System Cards Explained](https://aibuzz.blog/ai-system-cards-explained/)
-- [CycloneDX — ML-BOM](https://cyclonedx.org/capabilities/mlbom/) — corrected 2026-08-18, replaces a vendor blog with the actual standard (now also ECMA-424)
-- [EU AI Act — Article 50 transparency rules](https://artificialintelligenceact.eu/transparency-rules-article-50/) — consumer-facing AI-content disclosure, live since 2026-08-02; added 2026-08-19
-- [Clio — Succession Planning for Solo Law Firms ("key person risk")](https://www.clio.com/blog/solo-law-firm-succession-planning/)
-- [Rootly — How to Run Effective Blameless Postmortems](https://rootly.com/incident-postmortems/blameless) — added 2026-08-19
+- [FinOps for AI Overview | FinOps Foundation](https://www.finops.org/wg/finops-for-ai-overview/) — cost-per-token/cost-per-inference/cost-per-completed-task unit-economics practice; added 2026-08-19
+- [Right-Sizing the Frontier: LLM Routing, Workload-to-Model Matching, and Token-per-Dollar Economics](https://medium.com/@adnanmasood/right-sizing-the-frontier-a-guide-to-llm-routing-workload-to-model-matching-and-token-per-dollar-1032d3dbcb01) — source for static tiering as the proportionate slice of LLM cost optimization, and for the ~100k DAU threshold where dynamic routing starts to pay for itself; added 2026-08-19
 
 ## Proportionality
 

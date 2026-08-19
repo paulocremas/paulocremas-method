@@ -225,18 +225,20 @@ Reasoning for this order:
 
 **Why this pillar exists**: cost overrun is an old failure mode, not a new one — but AI-driven work gives it a new, faster shape: an agentic loop or an unbounded batch job can spend money indefinitely if nothing bounds it by design, faster than a traditional misconfiguration usually would. Cost needs to be bounded **by construction**, the architecture itself makes the failure impossible or capped, not just caught after the fact on a monthly bill. This is also the most flexible pillar in the priority order above: worth spending more against, deliberately, if the alternative is a security or reliability failure — but that flexibility only holds because the baseline discipline below already exists and isn't itself the thing failing.
 
-**What this requires of any new project's `STANDARDS.md`**: any AI work runs through a bounded-cost interface (a batch API, not an open-ended interactive loop) unless a specific, reviewed exception is documented; escalating budget alerts configured before a new agent or pipeline ships, not after; a real cost projection done before a new agent ships, not discovered from the first bill; prompt/response caching used by default wherever the underlying API supports it.
+**What this requires of any new project's `STANDARDS.md`**: any AI work runs through a bounded-cost interface (a batch API, not an open-ended interactive loop) unless a specific, reviewed exception is documented; escalating budget alerts configured before a new agent or pipeline ships, not after; a real cost projection done before a new agent ships, expressed as a cost-per-completed-task unit, not just a raw dollar figure, and not discovered from the first bill; the smallest model capable of a task used by deliberate choice, not the frontier model by default; prompt/response caching used by default wherever the underlying API supports it.
 
 **Precedent**:
 - An AI enrichment workload runs via a batch inference API — inherently bounded-cost, never an open-ended interactive agent loop.
 - A live ops dashboard's billing panel makes real spend visible on demand, not discovered from a monthly bill after the fact.
+- The AI enrichment workload already runs on a deliberately smaller, cheaper model rather than a frontier one — static tiering in practice, just not yet named as a formal commitment.
 
-**Commitments, adopted 2026-08-18, status "in rollout"**:
+**Commitments, adopted 2026-08-18 unless noted, status "in rollout"**:
 - Escalating budget alerts (same structure as Pillar 1: thresholds and hard cap defined per company's `STANDARDS.md`), leaning toward enforcement — stopping the next call, not just notifying after the spend already happened.
-- A real cost projection required before any new agent ships.
+- A real cost projection required before any new agent ships, stated as cost-per-completed-task (adopted 2026-08-19: sharpened from a bare dollar figure to a unit-economics number, so cost is comparable across runs of different size).
 - Prompt/response caching used by default — Anthropic's own **Prompt Caching** feature, cache-read tokens priced roughly 90% below base input-token rates, currently unused anywhere despite being native to the exact API already in use.
+- **Static model tiering** (adopted 2026-08-19) — the smallest model capable of a task is used by deliberate, static choice, never a learned/dynamic router. Names what the AI enrichment workload already does; deliberately excludes dynamic model-routing systems, which only pay for themselves at a request volume far above his own.
 
-**Real market practices this maps to**: Anthropic's own officially named **Prompt Caching** feature; the 2026 cost-governance distinction between *alerts* (notify after spend happens) and *enforcement* (pause or terminate before the next call happens) — this pillar leans toward enforcement specifically, since an alert alone doesn't bound anything by construction, it only reports it after the fact.
+**Real market practices this maps to**: Anthropic's own officially named **Prompt Caching** feature; the 2026 cost-governance distinction between *alerts* (notify after spend happens) and *enforcement* (pause or terminate before the next call happens) — this pillar leans toward enforcement specifically, since an alert alone doesn't bound anything by construction, it only reports it after the fact; **FinOps for AI**'s cost-per-token/cost-per-inference/cost-per-completed-task unit-economics practice (FinOps Foundation), scaled down to the one metric that's actually useful at his size; **static model tiering** as the proportionate slice of 2026 LLM cost-optimization practice — the same **Choose Boring Technology** reasoning already cited under Pillar 4 applied to model selection: static tiering captures most of the available savings without the complexity of a learned router.
 
 ---
 
