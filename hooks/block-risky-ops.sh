@@ -19,7 +19,7 @@ if echo "$INPUT" | grep -qiE 'terraform apply|gcloud[^"]*deploy|kubectl apply|do
   exit 2
 fi
 
-if echo "$INPUT" | grep -qiE '\.env"|\.pem"|\.key"|service-account[^"]*\.json"|credentials\.json"'; then
+if echo "$INPUT" | grep -qiE '\.env|\.pem|\.key|service-account[^"]*\.json|credentials\.json'; then
   echo 'Blocked: looks like a credential file. The Lead agent never touches live credentials (see lead-agent.md, "What you never do").' >&2
   exit 2
 fi
