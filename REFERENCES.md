@@ -33,7 +33,7 @@ Every source `CONSTITUTION.md` cites by name, organized by the Constitution's ow
 - [Safely Interruptible Agents (Orseau & Armstrong, UAI 2016)](https://dl.acm.org/doi/10.5555/3020948.3021006) — corrected 2026-08-18, the previous link pointed to a 2017 paper by different authors; backs the kill switch citation
 - [Corrigibility (Soares, Fallenstein, Yudkowsky & Armstrong, AAAI-15 Workshop on AI and Ethics, 2015; MIRI technical report 2014-6)](https://intelligence.org/2014/10/18/new-report-corrigibility/) — corrected 2026-08-18, replaces a vendor-glossary source with the founding paper; backs the kill switch citation
 - [EU AI Act — Regulation (EU) 2024/1689, Article 14](https://artificialintelligenceact.eu/article/14/) — cited only as the shape of runtime-halt regulatory convergence for high-risk systems, not as a requirement currently binding his own work; California SB-1047 (vetoed) and the 2024 Seoul Declaration (voluntary) were dropped from this citation 2026-08-18 as overstated for that purpose; backs the kill switch citation
-- [OWASP Top 10 for Agentic Applications (2026)](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) — added 2026-08-18; backs both the eval-harness-integrity commitment (under Verify against ground truth, below) and the kill switch
+- [OWASP Top 10 for Agentic Applications (2026)](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) — added 2026-08-18, narrowed 2026-08-19 after re-verification found no eval-harness-integrity category in the source; backs only the kill switch (ASI04, ASI10)
 
 ### Verify against ground truth, don't infer
 
@@ -65,7 +65,7 @@ Every source `CONSTITUTION.md` cites by name, organized by the Constitution's ow
 - Choose Boring Technology — already cited under Preamble, see there
 - Shift Left — already cited under Pillar 2, see there
 - [NIST SSDF SP 800-218 — static analysis (practice PW.7)](https://secportal.io/blog/nist-ssdf-implementation-guide) — backs the static-analysis-in-CI commitment
-- [NIST SP 500-235 — McCabe cyclomatic complexity](https://www.mccabe.com/pdf/mccabe-nist235r.pdf) — PDF downloads and appears legitimate by size/host, but its text content wasn't verifiable in this pass; confirm before citing this one publicly; backs the cyclomatic-complexity-ceiling half of the same commitment
+- [NIST SP 500-235 — McCabe cyclomatic complexity](https://www.mccabe.com/pdf/mccabe-nist235r.pdf) — confirmed 2026-08-19 by extracting the PDF text: *Structured Testing: A Testing Methodology Using the Cyclomatic Complexity Metric*, Watson & McCabe, Sept 1996, backs the limit-of-10 ceiling directly ("significant supporting evidence", up to 15 used successfully); backs the cyclomatic-complexity-ceiling half of the same commitment
 - [Spec-Driven Development in 2026: What It Is, the Tooling, and How Teams Actually Use It](https://dev.to/krlz/spec-driven-development-in-2026-what-it-is-the-tooling-and-how-teams-actually-use-it-2fk2) — backs the spec-driven-development commitment; added 2026-08-19
 - [How to Review AI-Generated Code in 2026: Pipeline, Tools, and Best Practices](https://codeant.ai/blogs/how-to-review-ai-generated-code) — source for the AI-generated-PR quality-gap figures behind the diff-size cap; added 2026-08-19
 - [Mutation Testing for AI-Generated Code: A Practical Guide | Augment Code](https://www.augmentcode.com/guides/mutation-testing-ai-generated-code) — backs the mutation-testing commitment; added 2026-08-19
