@@ -80,3 +80,4 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 
 - [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy) — see Anthropic, above
 - [Google Cloud Well-Architected Framework](https://docs.cloud.google.com/architecture/framework)
+- [Semantic Versioning 2.0.0](https://semver.org/) — added 2026-08-19, backs the Constitution's own version tags
