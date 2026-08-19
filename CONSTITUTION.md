@@ -78,21 +78,22 @@ Reasoning for this order:
 
 ### Practice: Design for cheap failure
 
-**What this requires of any new project's `STANDARDS.md`**: independent, overlapping fixes for any real failure mode, never a single layer of defense; idempotent operations wherever a retry is possible, so a failure costs a retry, not lost or duplicated data; a kill switch that halts any agent immediately without a new deployment; the same concurrency/retry discipline extended to AI agent tool-calling loops, not just traditional pipeline code; blast-radius-scoped chaos testing before trusting any resilience claim.
+**What this requires of any new project's `STANDARDS.md`**: independent, overlapping fixes for any real failure mode, never a single layer of defense; idempotent operations wherever a retry is possible, so a failure costs a retry, not lost or duplicated data; a circuit breaker on any external dependency call, stopping calls once a dependency is clearly failing instead of retrying into a worsening incident; a kill switch that halts any agent immediately without a new deployment; the same concurrency/retry discipline extended to AI agent tool-calling loops, not just traditional pipeline code; blast-radius-scoped chaos testing before trusting any resilience claim.
 
 **Precedent**:
 - A rate-limit incident: root cause was a vendor API account limit silently shared across multiple pipelines, invisible to each pipeline's own semaphore — an undisclosed shared limit at the vendor, not a bug in the pipeline code itself.
 - Fixed in two independent layers — retry-on-429 plus schedule retiming, not just one.
 - Idempotent cursor design (`MAX(id_item)` in BigQuery) meant the incident cost a retry, not lost data.
 
-**Commitments, adopted 2026-08-18, status "in rollout"**:
+**Commitments, adopted 2026-08-18 unless noted, status "in rollout"**:
 - Concurrency/retry discipline extended to AI agent tool-calling loops.
 - An incident runbook turning root-cause write-ups into reusable "when X breaks, do Y" references.
 - Chaos engineering — blast-radius-scoped proactive failure injection, starting small, expanding only after safety controls are confirmed.
 - A kill switch — any agent halted immediately, no new deployment needed.
 - An agent never modifies the test or evaluation harness that judges its own output — closes a loophole nothing else in this pillar covers, added 2026-08-18 after a review found no existing commitment prevented it.
+- **Circuit breaker on external dependency calls** (adopted 2026-08-19) — retry alone assumes the failure is transient; a circuit breaker additionally stops calling a dependency once it's clearly failing, rather than continuing to retry into a worsening incident. Directly motivated by the rate-limit incident above: retry-on-429 alone kept pressure on an already-failing vendor limit until schedule retiming addressed the real cause — a circuit breaker would have contained that pressure faster.
 
-**Real market practices this maps to**: **Defense in Depth**; **Chaos Engineering**; kill switch → **Safe Interruptibility** (Orseau & Armstrong, DeepMind/Oxford, 2016) + **Corrigibility** (Soares, Fallenstein, Yudkowsky & Armstrong, AAAI-15 Workshop on AI and Ethics, 2015) — real engineering concepts a regulatory trend is converging toward (the EU AI Act's Article 14 runtime-halt requirement for high-risk systems), not a requirement currently binding his own work; the eval-harness-integrity commitment above and the kill switch both map to named risk categories in the **OWASP Top 10 for Agentic Applications (2026)**.
+**Real market practices this maps to**: **Defense in Depth**; **Chaos Engineering**; the **Circuit Breaker pattern** (Michael Nygard, *Release It!*, 2007) as the protective complement to retry — retry is optimistic and best for idempotent, transient faults, circuit breaker is protective and stops cascading failure, the two used together rather than as alternatives; kill switch → **Safe Interruptibility** (Orseau & Armstrong, DeepMind/Oxford, 2016) + **Corrigibility** (Soares, Fallenstein, Yudkowsky & Armstrong, AAAI-15 Workshop on AI and Ethics, 2015) — real engineering concepts a regulatory trend is converging toward (the EU AI Act's Article 14 runtime-halt requirement for high-risk systems), not a requirement currently binding his own work; the eval-harness-integrity commitment above and the kill switch both map to named risk categories in the **OWASP Top 10 for Agentic Applications (2026)**.
 
 ### Practice: Verify against ground truth, don't infer
 
@@ -111,16 +112,17 @@ Reasoning for this order:
 
 ### Practice: Detect failure, don't wait to notice it
 
-**What this requires of any new project's `STANDARDS.md`**: every scheduled or recurring job has an automated check that alerts when it doesn't run, or runs and produces no output, on its own — detection never depends on a human opening a dashboard; a pipeline's output is checked against a minimum set of assertions after every load — freshness and volume required at every tier, schema conformance required wherever the schema is known in advance, distribution checks optional until a real baseline exists at Tier 2+ — so a job that ran and wrote wrong data is caught the same way a job that didn't run at all already is.
+**What this requires of any new project's `STANDARDS.md`**: every scheduled or recurring job has an automated check that alerts when it doesn't run, or runs and produces no output, on its own — detection never depends on a human opening a dashboard; a pipeline's output is checked against a minimum set of assertions after every load — freshness and volume required at every tier, schema conformance required wherever the schema is known in advance, distribution checks optional until a real baseline exists at Tier 2+ — so a job that ran and wrote wrong data is caught the same way a job that didn't run at all already is; every production pipeline states one lightweight SLO (a stated success-rate target) backed by an error budget that governs pace, not just a measurement.
 
 **Precedent**:
 - A real incident ran a full day, zero items captured, before anyone noticed — the root cause was fixable in minutes once found; the day was lost entirely to not knowing.
 
-**Commitments, adopted 2026-08-18, status "in rollout"**:
+**Commitments, adopted 2026-08-18 unless noted, status "in rollout"**:
 - Automated silent-failure detection: a missed or zero-output scheduled run triggers an alert on its own.
 - Data-quality assertions (freshness, volume, schema required; distribution optional at Tier 2+) extending silent-failure detection from "did it run" to "did it write something correct" — the gap this closes: nothing before this caught a job that ran cleanly and still wrote wrong data.
+- **A lightweight SLO and error budget per production pipeline** (adopted 2026-08-19) — one stated success-rate target per pipeline, no quarterly review ritual, no multi-service SLO program; when the error budget burns out, reliability work on that pipeline takes priority over new feature work until it recovers. Scaled down deliberately from the enterprise SRE version: a governance rule against his own stated target, never a benchmark against another company's numbers — the same reasoning that already ruled out DORA metrics as meaningless at his scale doesn't apply here, since nothing is being compared against a cohort.
 
-**Real market practices this maps to**: **MTTD (Mean Time to Detect)** as a reliability metric distinct from MTTR; the dead man's switch / heartbeat monitoring pattern; the four-dimension data-quality-assertion shape (freshness, volume, schema, distribution) used in current data-observability practice.
+**Real market practices this maps to**: **MTTD (Mean Time to Detect)** as a reliability metric distinct from MTTR; the dead man's switch / heartbeat monitoring pattern; the four-dimension data-quality-assertion shape (freshness, volume, schema, distribution) used in current data-observability practice; **SLI/SLO/error budgets** (Google SRE) as the reliability-governance counterpart to Pillar 5's budget alerts — the same escalation logic applied to a reliability target instead of a dollar figure.
 
 ---
 

@@ -29,6 +29,8 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 
 - [Palo Alto Networks — Defense-in-Depth](https://www.paloaltonetworks.com/cyberpedia/what-is-defense-in-depth)
 - [Principles of Chaos Engineering](https://principlesofchaos.org/)
+- [Martin Fowler — CircuitBreaker](https://martinfowler.com/bliki/CircuitBreaker.html) — the Circuit Breaker pattern, crediting Michael Nygard's *Release It!* (2007) as its origin; added 2026-08-19
+- [Google SRE Book — Service Level Objectives](https://sre.google/sre-book/service-level-objectives/) — SLI/SLO/error budget, cited as the reliability-governance counterpart to Pillar 5's budget alerts; added 2026-08-19
 - [Safely Interruptible Agents (Orseau & Armstrong, UAI 2016)](https://dl.acm.org/doi/10.5555/3020948.3021006) — corrected 2026-08-18, the previous link pointed to a 2017 paper by different authors
 - [Corrigibility (Soares, Fallenstein, Yudkowsky & Armstrong, AAAI-15 Workshop on AI and Ethics, 2015; MIRI technical report 2014-6)](https://intelligence.org/2014/10/18/new-report-corrigibility/) — corrected 2026-08-18, replaces a vendor-glossary source with the founding paper
 - [EU AI Act — Regulation (EU) 2024/1689, Article 14](https://artificialintelligenceact.eu/article/14/) — cited only as the shape of runtime-halt regulatory convergence for high-risk systems, not as a requirement currently binding his own work; California SB-1047 (vetoed) and the 2024 Seoul Declaration (voluntary) were dropped from this citation 2026-08-18 as overstated for that purpose
