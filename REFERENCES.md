@@ -46,6 +46,9 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 - [CIS Critical Security Controls v8.1](https://www.cisecurity.org/controls/v8-1) — corrected 2026-08-18, was citing the superseded v8
 - [NIST SSDF SP 800-218 — static analysis (practice PW.7)](https://secportal.io/blog/nist-ssdf-implementation-guide)
 - [NIST SP 500-235 — McCabe cyclomatic complexity](https://www.mccabe.com/pdf/mccabe-nist235r.pdf) — PDF downloads and appears legitimate by size/host, but its text content wasn't verifiable in this pass; confirm before citing this one publicly
+- [Spec-Driven Development in 2026: What It Is, the Tooling, and How Teams Actually Use It](https://dev.to/krlz/spec-driven-development-in-2026-what-it-is-the-tooling-and-how-teams-actually-use-it-2fk2) — added 2026-08-19
+- [How to Review AI-Generated Code in 2026: Pipeline, Tools, and Best Practices](https://codeant.ai/blogs/how-to-review-ai-generated-code) — source for the AI-generated-PR quality-gap figures behind the diff-size cap; added 2026-08-19
+- [Mutation Testing for AI-Generated Code: A Practical Guide | Augment Code](https://www.augmentcode.com/guides/mutation-testing-ai-generated-code) — added 2026-08-19
 - [Google Cloud — Introduction to security and access controls in BigQuery](https://docs.cloud.google.com/bigquery/docs/access-control-intro)
 - [Google Cloud — Manage partition and cluster recommendations in BigQuery](https://docs.cloud.google.com/bigquery/docs/manage-partition-cluster-recommendations)
 - [NIST SP 800-34 Rev. 1 — Contingency Planning Guide](https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf) (12h/30d recovery targets)
