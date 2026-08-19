@@ -1,8 +1,8 @@
 # The Constitution
 
-*Governs how Paulo Cremasco's own work gets built and run: security, cost, reliability, engineering standards, and how tradeoffs get disclosed. Published here in full since 2026-08-18. The mechanism that enforces this document (the agent hierarchy: Lead agent / Manager agent / Subagent) is a technical/implementation layer, so it sits outside this document rather than inside it, per the philosophy/principles/mechanism separation this document is built on. Today only the top tier has a live config, published alongside this file as `lead-agent.md`; the Manager and Subagent tiers are design intent only, not yet formalized as their own files.*
+*Governs how Paulo Cremasco's own work gets built and run: security, cost, reliability, engineering standards, and how tradeoffs get disclosed. Published here in full since 2026-08-18. The mechanism that enforces this document (the agent hierarchy: Lead agent / Manager agent / Subagent) is a technical/implementation layer, so it sits outside this document rather than inside it, per the philosophy/principles/mechanism separation this document is built on. Today only the top tier has a live config, published alongside this file as `lead-agent.md`. The Manager and Subagent tiers have reusable templates (`templates/manager-agent.template.md`, `templates/subagent.template.md`) — patterns to instantiate when a real company or project concretely needs one, not yet a live instance for any of them.*
 
-**Current version: v2.1.1** (see Review and Amendment for the versioning scheme).
+**Current version: v2.1.2** (see Review and Amendment for the versioning scheme).
 
 ## Preamble
 
