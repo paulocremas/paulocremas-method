@@ -72,6 +72,7 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 ## Proportionality
 
 - [Home Office UK — Proportionate security](https://engineering.homeoffice.gov.uk/principles/proportionate-security/)
+- [CIS Critical Security Controls — Implementation Groups](https://www.cisecurity.org/controls/implementation-groups) — closest direct parallel to the Tiers; added 2026-08-19
 - [FAIR Institute — Risk-Based Technology Controls Framework](https://www.fairinstitute.org/blog/establishing-a-risk-based-technology-controls-framework)
 - [FAIR Institute — FAIR-CAM (FAIR Controls Analytics Model) v1.0](https://www.fairinstitute.org/fair-controls-analytics-model) — added 2026-08-18, cited as a parallel to the Tiers, not an implementation
 
