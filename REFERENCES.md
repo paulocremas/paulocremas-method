@@ -19,6 +19,7 @@ Every source `CONSTITUTION.md` cites by name, organized by the Constitution's ow
 - [Mayer Brown — End of grace period, Brazil's SCCs for international data transfers](https://www.mayerbrown.com/pt/insights/publications/2025/08/end-of-grace-period-implementation-of-brazils-standard-contractual-clauses-in-international-transfers-of-personal-data) — confirms the grace period ended August 2025, already binding; this is the citation the public claim actually rests on
 - [Unit 42 (Palo Alto Networks) — tj-actions/changed-files supply chain attack](https://unit42.paloaltonetworks.com/github-actions-supply-chain-attack/) — precedent for the SHA-pinning half of the Supply-chain integrity commitment
 - [GitHub Changelog — Actions policy supports SHA pinning](https://github.blog/changelog/2025-08-15-github-actions-policy-now-supports-blocking-and-sha-pinning-actions/) — backs the SHA-pinning mechanism itself
+- [pip — Hash-checking mode](https://pip.pypa.io/en/stable/topics/secure-installs/) — "uses local hashes, embedded in a requirements.txt file, to protect against remote tampering"; backs the hash-locked-dependency half of the Supply-chain integrity commitment; added 2026-08-19
 - [Wikipedia — Data minimization](https://en.wikipedia.org/wiki/Data_minimization) — backs the data-minimization half of the Confidentiality by construction citation
 - [NIST IR 7298 Rev. 2 — Glossary of Key Information Security Terms](https://nvlpubs.nist.gov/nistpubs/ir/2013/nist.ir.7298r2.pdf) — backs the need-to-know half of the same citation; added 2026-08-19
 - [Wikipedia — Clean-room design](https://en.wikipedia.org/wiki/Clean-room_design) — backs the clean-room reimplementation citation under Confidentiality by construction; added 2026-08-19
@@ -57,6 +58,7 @@ Every source `CONSTITUTION.md` cites by name, organized by the Constitution's ow
 - [Clio — Succession Planning for Solo Law Firms ("key person risk")](https://www.clio.com/blog/solo-law-firm-succession-planning/) — backs the "key person risk" citation
 - [ACM — Bus factor in practice (Ferreira, Valente et al., ICSE-SEIP 2022)](https://dl.acm.org/doi/10.1145/3510457.3513082) — backs the bus factor reduction citation; added 2026-08-19
 - [Rootly — How to Run Effective Blameless Postmortems](https://rootly.com/incident-postmortems/blameless) — backs the blameless postmortem citation; added 2026-08-19
+- [DORA — Learning Culture capability](https://dora.dev/capabilities/learning-culture/) — "treat failures as opportunities to learn, and hold blameless post-mortems"; backs DORA naming blameless postmortems as a high-performer trait, cited only as corroborating evidence, not as adoption of DORA's benchmarking metrics; added 2026-08-19
 
 ## Pillar 4: Engineering Excellence
 
