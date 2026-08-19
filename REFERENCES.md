@@ -57,7 +57,9 @@ Every source `CONSTITUTION.md` cites by name, grouped by theme — scoped strict
 - [AWS Architecture Blog — ADR best practices](https://aws.amazon.com/blogs/architecture/master-architecture-decision-records-adrs-best-practices-for-effective-decision-making/)
 - [AI Buzz — AI System Cards Explained](https://aibuzz.blog/ai-system-cards-explained/)
 - [CycloneDX — ML-BOM](https://cyclonedx.org/capabilities/mlbom/) — corrected 2026-08-18, replaces a vendor blog with the actual standard (now also ECMA-424)
+- [EU AI Act — Article 50 transparency rules](https://artificialintelligenceact.eu/transparency-rules-article-50/) — consumer-facing AI-content disclosure, live since 2026-08-02; added 2026-08-19
 - [Clio — Succession Planning for Solo Law Firms ("key person risk")](https://www.clio.com/blog/solo-law-firm-succession-planning/)
+- [Rootly — How to Run Effective Blameless Postmortems](https://rootly.com/incident-postmortems/blameless) — added 2026-08-19
 
 ## Proportionality
 

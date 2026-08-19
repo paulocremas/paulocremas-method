@@ -132,18 +132,19 @@ Reasoning for this order:
 
 ### Practice: Tradeoffs written down, never silent
 
-**What this requires of any new project's `STANDARDS.md`**: any hard-to-reverse or cross-team decision gets a written ADR before or immediately after the fact, never only remembered; any deployed AI-involving system gets a System Card documenting the model, the review/oversight mechanism, and known limitations; any project using AI discloses, in one line, which model/version, whether it's fine-tuned (never, here), and which APIs/infra the AI touches; an open question stays written down as open, never quietly assumed resolved; when it's unclear whether a Constitution rule applies, or the information needed to decide is missing, that gap is stated explicitly and flagged for a decision, never silently assumed or fabricated.
+**What this requires of any new project's `STANDARDS.md`**: any hard-to-reverse or cross-team decision gets a written ADR before or immediately after the fact, never only remembered; any deployed AI-involving system gets a System Card documenting the model, the review/oversight mechanism, and known limitations; any project using AI discloses, in one line, which model/version, whether it's fine-tuned (never, here), and which APIs/infra the AI touches; any project whose AI output reaches an end consumer directly (e.g. AI-generated product content shown on a live storefront) flags this in the AI-BOM so the deploying client is aware of its own AI-content disclosure obligation; an open question stays written down as open, never quietly assumed resolved; when it's unclear whether a Constitution rule applies, or the information needed to decide is missing, that gap is stated explicitly and flagged for a decision, never silently assumed or fabricated.
 
 **Precedent**:
 - Reusing a broad-scope personal token as a CI fix was a conscious, asked-first decision, with the properly-scoped fix named as a real follow-up — not hidden.
 - The AI enricher's lack of automation is documented as an open, undecided question rather than quietly assumed fine.
 
-**Commitments, adopted 2026-08-18, status "in rollout"**:
+**Commitments, adopted 2026-08-18 unless noted, status "in rollout"**:
 - **ADR (Architecture Decision Record)** — root-cause write-ups already function as informal ADRs; formalized as one ADR per hard-to-reverse or cross-team decision, stored in `docs/adr/`, written forward from now rather than retroactively.
 - **System Card per project** — documents the deployed system: model, review/oversight mechanism, limitations.
 - **Light AI-BOM** — one line per project disclosing model/version, no fine-tuning, and which APIs/infra the AI touches.
+- **EU AI Act Article 50 flag** (adopted 2026-08-19) — when a project's AI output reaches an end consumer directly, the AI-BOM additionally notes this so the deploying client is aware of its own Article 50 consumer-facing disclosure obligation (live since 2026-08-02). An advisory flag, not a claim that he personally discharges the client's disclosure duty: Article 50 obligations fall on the provider/deployer facing the end consumer — typically the client, not the service provider who built the pipeline.
 
-**Real market practices this maps to**: **ADR** (adr.github.io, AWS Architecture Blog); **System Cards**; **AI-BOM** — the same disclosure surface CycloneDX's **ML-BOM** standard (now **ECMA-424**) covers, though his own version stays a one-line disclosure, not a generated CycloneDX document.
+**Real market practices this maps to**: **ADR** (adr.github.io, AWS Architecture Blog); **System Cards**; **AI-BOM** — the same disclosure surface CycloneDX's **ML-BOM** standard (now **ECMA-424**) covers, though his own version stays a one-line disclosure, not a generated CycloneDX document; the EU AI Act's **Article 50** consumer-facing AI-content disclosure requirement — unlike the Article 14 kill-switch requirement cited under Pillar 2, already binding since 2026-08-02, though on the deploying client rather than on him directly.
 
 ### Practice: Eliminate tribal knowledge
 
@@ -153,11 +154,11 @@ Reasoning for this order:
 - A real `STANDARDS.md` already functions as the single source of truth for how a company's pipelines get built — new work derives from it, not from asking around.
 - A governance clarification: "AI driven" does not mean removing human code review — it means the docs must stand on their own, with no hidden context needed to understand the business.
 
-**Commitments, adopted 2026-08-17, status "in rollout"**:
-- Postmortems consolidated into `docs/postmortems/`, alongside `docs/adr/`.
+**Commitments, adopted 2026-08-17 unless noted, status "in rollout"**:
+- Postmortems consolidated into `docs/postmortems/`, alongside `docs/adr/`, written blameless (added 2026-08-19) — focused on systemic root cause, never individual fault.
 - A periodic zero-context test.
 
-**Real market practices this maps to**: bus factor reduction / documentation as the single source of truth; also his real, named answer to **"key person risk"** (the sole-practitioner succession-planning term) — no separate commitment needed for that beyond the two above, the zero-context-test discipline already is the mitigation.
+**Real market practices this maps to**: bus factor reduction / documentation as the single source of truth; also his real, named answer to **"key person risk"** (the sole-practitioner succession-planning term) — no separate commitment needed for that beyond the two above, the zero-context-test discipline already is the mitigation; **blameless postmortem** practice (Google SRE) — also named in DORA's own research as a high-performer trait, cited here only as corroborating evidence, not as adoption of DORA's benchmarking metrics, which stay rejected as disproportionate at his scale.
 
 ---
 
