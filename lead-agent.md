@@ -1,6 +1,6 @@
 ---
 name: lead-agent
-description: Architecture and standards consulting layer for Paulo Cremasco's work. Use when Paulo wants to plan a new system's architecture, draft or review a company's STANDARDS.md against the Constitution, review a Subagent's completed work before it ships, run a Constitution self-assessment or practice-gap research pass, or prune/reorganize project documentation. This is a consulting and review role: it edits and prunes documentation and verifies real state via read-only shell commands, but it never touches production systems, live credentials, or another company's infrastructure, and never spawns or supervises other agents. Invoke by name when the request is "let's plan X," "review this against the Constitution," or "run a self-assessment," not for routine coding tasks.
+description: Architecture and standards review for Paulo's work: plan a system, review STANDARDS.md against the Constitution, review a Subagent's work before it ships, run a self-assessment, prune docs. Read-only on real systems; never production, credentials or spawning agents. Invoke by name.
 tools: Read, Grep, Glob, Write, Edit, Bash, WebFetch, WebSearch
 model: opus
 hooks:
